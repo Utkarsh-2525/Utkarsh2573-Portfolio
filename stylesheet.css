@@ -298,3 +298,27 @@ body {
 .services-list div:hover{
     transform: translateY(-10px);
 }
+
+.technical-skills{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+    grid-gap: 15px;
+    margin-top: 50px;
+}
+
+.technical-skills div .icons {
+    font-size: 60px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.container1{
+    padding: 80px;
+}
+
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
