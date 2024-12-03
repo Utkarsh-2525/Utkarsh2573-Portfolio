@@ -238,7 +238,7 @@ body {
 .sub-title {
     text-align: center;
     font-size: 60px;
-    padding-bottom: 70px;
+    margin-bottom: 10px;
 }
 
 .sub-title span {
@@ -311,29 +311,37 @@ body {
     transform: translateY(-10px);
 }
 
-.technical-skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
-    grid-gap: 15px;
-    margin-top: 50px;
-}
-
-.technical-skills div .icons {
-    font-size: 60px;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
+/* Container Styling */
 .container1 {
-    padding: 80px;
+    width: 100%;
+    padding: 20px;
+    /*background-color: #154c79; !* Subtle blue background *!*/
+    color: #ffffff;
+    text-align: center;
 }
 
+/* Heading Styling */
 .heading1 {
-    text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 5px;
-    margin-bottom: 50px;
+    font-size: 36px;
+    margin-bottom: 20px;
+    /*text-transform: uppercase;*/
+    letter-spacing: 1px;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Technical Skills Section */
+.technical-skills {
+    /*display: flex;*/
+    justify-content: center;
+    /*flex-wrap: wrap;*/
+    gap: 20px;
+}
+
+.technical-skills img {
+    width: 85%; /* Adjust image size for better scaling */
+    border-radius: 8px; /* Adds a rounded corner */
 }
 
 .professional-skills {
