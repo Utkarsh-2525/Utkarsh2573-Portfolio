@@ -226,6 +226,7 @@ body {
     font-size: 19px;
     line-height: 1.4;
     margin-bottom: 4rem;
+    padding: 10px;
 }
 
 #services {
@@ -345,10 +346,14 @@ body {
 }
 
 .professional-skills {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     grid-gap: 15px;
-    margin-top: 50px;
+    margin: 20px;
 }
 
 .professional-skills div {
@@ -359,7 +364,7 @@ body {
     /*border-right: 10px;*/
     border-radius: 20px;
     transition: background 0.5s, transform 0.5s;
-    box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7;
+    box-shadow: 1px 1px 20px rgba(58, 75, 123, 0.97), 1px 1px 40px #0053b8f7;
 }
 
 .professional-skills div:hover {
@@ -372,7 +377,7 @@ body {
 
 .main-text {
     padding-top: 130px;
-    margin-top: 200px;
+    margin: 20px;
 }
 
 .main-text h2 {
@@ -387,7 +392,13 @@ body {
 
 .portfolio-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(359px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .row {
@@ -395,13 +406,17 @@ body {
     overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .row img {
-    width: 500px;
-    height: 50vh;
+    width: 250px;
+    height: 250px;
     border-radius: 8px;
-    display: block;
     transition: transform 0.5s;
 }
 
@@ -418,8 +433,9 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 40px;
-    transition: height 0.5s;
+    padding: 20px;
+    transition: height 0.5s ease;
+    border-radius: 8px;
 }
 
 .layer h5 {
@@ -436,17 +452,12 @@ body {
     font-weight: 450;
 }
 
-.layer i {
-    color: #f11c1c;
-    margin-top: 20px;
-    font-size: 20px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+.layer a {
+    color: #0d3200;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
 }
 
 .row:hover img {
@@ -477,7 +488,7 @@ body {
 }
 
 .contact-text h4 {
-    margin: 15px 0;
+    margin: 50px;
     color: #fff;
     font-weight: 600;
 }
@@ -486,7 +497,7 @@ body {
     color: rgb(177, 177, 177);
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 2rem;
+    margin: 50px;
 }
 
 .contact-list {
@@ -495,7 +506,7 @@ body {
 }
 
 .contact-list li {
-    margin-bottom: 10px;
+    margin: 10px 0 10px 50px;
     display: block;
 }
 
@@ -510,6 +521,10 @@ body {
 .contact-list li a:hover {
     transform: scale(1.01) translateY(-5px);
     color: #0ef;
+}
+
+.contact-icons{
+    margin-left: 50px;
 }
 
 .contact-icons i {
@@ -535,4 +550,46 @@ body {
     background: #0ef;
     color: #081b29;
     box-shadow: 0 0 20px #0ef;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="submit"],
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #0056b3;
 }
